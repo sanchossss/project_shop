@@ -1,0 +1,368 @@
+
+/* ------------Стили для сайта--------------*/
+.content{
+  display: flex;
+  position: relative;
+  padding: 0px 0px 0px 100px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 44px;
+  align-self: stretch;
+}
+
+/*=============== Фильтр ===============*/
+.filter-open{
+  display: flex;
+  position: relative;
+  padding: 16px 128px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--primary-color, #2CA54E);
+  visibility: hidden;
+  position: absolute;
+  max-width: 320px;
+
+  color: var(--white, #FFF);
+  font-family: 'Inter';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.filter-open:hover{
+  box-shadow: var(--shadow-green);
+}
+.filter{
+  display: flex;
+  position: sticky;
+  top: 20px;
+  padding: 20px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 295px;
+  visibility: visible;
+  transition: all 0.3s;
+}
+.filter img{
+  visibility: hidden;
+  position: absolute;
+}
+.classification{
+  position: relative;
+  width: 139px;
+  height: 42px;
+  color: var(--black, #303030);
+  font-family: 'TTTravels';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.filter .title-f{
+  color: var(--black, #303030);
+  font-family: 'TTTravels';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.tumbler{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.tumbler .title{
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Переключатель - коробка вокруг ползунка */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+/* Скрыть флажок HTML по умолчанию */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* Ползунок */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Закругленные ползунки */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+.categs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.categs .title{
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+ul li{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+ul li label{
+  color: var(--black-non-accent, #727272);
+  font-family: 'Inter';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+ul li input[type=radio]{
+  width: 24px;
+  height: 24px;
+}
+ul li input[type=radio]:checked + label{
+  color: var(--black);
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----====== Список книг ======----*/
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  max-width: 1240px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap:40px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.book-card{
+  display: flex;
+  position: relative;
+  width:280px;
+  height: 792px;
+  flex-shrink: 1;
+  border-radius: 20px;
+  background: var(--white, #FFF);
+}
+
+
+/*Внутренности карточки*/
+.book-card .like{
+  display: flex;
+  position: absolute;
+  top:20px;
+  right:20px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  z-index: 40;
+}
+.img-book{
+  display: flex;
+  position: absolute;
+  width: 240px;
+  height: 376px;
+  right:20px;
+  top:20px;
+  flex-shrink: 0;
+}
+.price{
+  position: absolute;
+  display: inline-flex;
+  padding: 10px;
+  left:20px;
+  bottom:327px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--secondary, #DEFFDD);
+  }
+.price .text{
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.card-list .book-card .book-info {
+  display: flex;
+  position: absolute;
+  left:20px;
+  top:478px;
+  display: flex;
+  width: 240px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.book-info .name {
+  position: relative;
+  width: fit-content;
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.book-info .author {
+  position: relative;
+  width: fit-content;
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.book-info .publ{
+  position: relative;
+  width: fit-content;
+  color: var(--black-non-accent, #727272);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+
+.available{
+  position: absolute;
+  left:20px;
+  bottom:137px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.available .text{
+  color: var(--primary-color, #2CA54E);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.rating{
+  position: absolute;
+  left:20px;
+  bottom:108px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.book-card .rating .rate{
+  width: 80px;
+  height: 16px;
+}
+.book-card .rating .text{
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.add-to-basket{
+  display: flex;
+  position: absolute;
+  left:20px;
+  bottom: 38px;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  border-radius: 5px;
+  background: var(--secondary, #DEFFDD);
+  transition: 0.3s all;
+}
+
+/*Анимация ховера кнопки*/
+.add-to-basket:hover{
+  background-color: var(--sec-hover);
+}
+.add-to-basket .text{
+  color: var(--black, #303030);
+  font-family: 'Inter';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.add-to-basket .basket{
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}

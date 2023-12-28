@@ -1,0 +1,246 @@
+
+/* ------------Стили для сайта--------------*/
+
+/*================= Стили самой карточки товара =================*/
+
+.product{
+    display: flex;
+    padding: 0px 100px;
+    align-items: flex-start;
+    gap: 60px;
+    align-self: stretch;
+}
+.left-side{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: row;
+}
+.left-side .photos{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: column;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+}
+.right-side .title{
+    align-self: stretch;
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.main{
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 40px 60px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.control{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+}
+.control .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+.info .available{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.info .available .text{
+    color: var(--primary-color, #2CA54E);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.add-to-fav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-color, #2CA54E);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.add-to-fav:hover{
+    color: var(--primary-color, #2CA54E);
+}
+.info .price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.add-to-basket{
+    display: flex;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--primary-color, #2CA54E);
+    color: var(--white, #FFF);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all 0.3s;
+}
+.add-to-basket:hover{
+    box-shadow: var(--shadow-green)
+}
+.characts{
+    display: flex;
+    min-width: 340px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+}
+.characts .title{
+    color: var(--black, #303030);
+    font-family: 'TTTravels';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.characts .text-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+.text-list .text{
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+.description .title{
+    color: var(--black, #303030);
+    font-family: 'TTTravels';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.description .text{
+    align-self: stretch;
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 25.2px */
+}
+
+.characts-mobile{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-width: 262x;
+    padding: 0px 100px;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+.characts-mobile .title{
+    color: var(--black, #303030);
+    font-family: 'TTTravels';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.characts-mobile .text-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.description-mobile {
+    display: flex;
+    position: relative;
+    padding: 0px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+.description-mobile .text-list .text{
+    position: relative;
+    min-width: 100px;
+    flex: 1 0 0;
+}
+
+
+.description-mobile, .characts-mobile{
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
