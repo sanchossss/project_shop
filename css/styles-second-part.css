@@ -1,0 +1,152 @@
+
+.bonus-program{
+    display: inline-flex;
+    position: relative;
+    max-width: 5000px;
+    min-width: 1920px;
+    min-height: 300px;
+    max-height: 500px;
+    justify-content: space-around;
+    flex-shrink: 1;
+}
+.cover-bonus{
+    display: flex;
+    position: relative;
+    max-width: 2520px;
+    height: auto;
+    padding: 15px 40px 15px 200px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--primary-color, #2CA54E);
+}
+.cover-bonus .texts{
+    display: flex;
+    position: relative;
+    gap:20px;
+    flex-direction: column;
+    min-height: 10px;
+    max-height: 600px;
+}
+.cover-bonus .title{
+    display: flex;
+    position: relative;
+    color: var(--white, #FFF);
+    font-family: 'TTTravels';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 10px;
+    max-height: 300px;
+}
+.cover-bonus .article{
+    display: flex;
+    position: relative;
+    max-width: 860px;
+    color: var(--white, rgba(255, 255, 255, 0.70));
+    font-family:'TTTravels';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    min-height: 10px;
+    max-height: 600px;
+}
+.cover-bonus .imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
+/*============ Слайдер популярные разделы ============*/
+.popular-categories{
+    position: relative;
+}
+.popular-categories .categories{
+    height:210px;
+}
+.slider .pointers{
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.slider .left-pointer, .slider .right-pointer {
+    box-shadow: 0px 0px 30px 0px rgba(48, 48, 48, 0.3);
+    fill: var(--white, #FFF);
+    border-radius: 100px;
+    transition: all 0.3s;
+}
+.left-pointer:hover, .right-pointer:hover {
+    transform:scale(1.1);
+}
+.detective{
+    position: relative;
+}
+
+
+
+
+
+.cover-2{
+    display: flex;
+    position: relative;
+    max-width: 1920px;
+    padding: 0px 200px;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+}
+.text-cover-2{
+    display: flex;
+    max-width: 1180px;
+    min-width: 887px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.text-cover-2 .title{
+    align-self: stretch;
+    color: var(--black, #303030);
+    font-family: 'TTTravels';
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 55.2px */
+}
+.text-cover-2 .article{
+    align-self: stretch;
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+}
+.text-cover-2 .button{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--primary-color, #2CA54E);
+    
+    color: var(--white, #FFF);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.45px;
+    transition: all 0.3s;
+}
+.text-cover-2 .button:hover{
+    /* лавбукс/оплата или оформ */
+    box-shadow: 0px 0px 20px 0px #2CA54E;
+}
