@@ -1,0 +1,709 @@
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+
+/* Шрифты, которые были использованы*/
+
+/* inter-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../FONTS-all/inter-v12-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* inter-500 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../FONTS-all/inter-v12-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* inter-600 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../FONTS-all/inter-v12-cyrillic_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* inter-700 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../FONTS-all/inter-v12-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* tt travels-300 - cyrillic_latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'TTTravels';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../FONTS-all/TTTravels-Light.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* tt travels-400 - cyrillic_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'TTTravels';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../FONTS-all/TTTravels-Regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* tt travels-500 - cyrillic_latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'TTTravels';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../FONTS-all/TTTravels-Medium.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* tt travels-600 - cyrillic_latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'TTTravels';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../FONTS-all/TTTravels-Bold.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+/* ========= Стили для всей страницы ==========*/
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:100px;
+  }
+
+  
+  .spiral-body-5 {
+    display: flex;
+    position: absolute;
+    width: 89px;
+    height: 93px;
+    top: 3407px;
+    left: 41px;
+  }
+  
+  .spiral-body-4 {
+    position: absolute;
+    width: 93px;
+    height: 114px;
+    top: 1720px;
+    right: 90px;
+  }
+  
+  .spiral-body-3 {
+    position: absolute;
+    width: 99px;
+    height: 88px;
+    top: 1337px;
+    left: 13px;
+  }
+  
+  .spiral-body-2 {
+    position: absolute;
+    width: 89px;
+    height: 93px;
+    top: 623px;
+    right: 70px;
+  }
+  
+  .spiral-body-1 {
+    position: absolute;
+    width: 113px;
+    height: 118px;
+    top: 378px;
+    left: 24px;
+  }
+  
+  /* Стили для фона */
+  .dark-bg{
+    position: fixed;
+    display: flex;
+    width:100%;
+    height:100%;
+    flex-shrink: 0;
+    background: rgba(114, 114, 114, 0.6);
+    z-index:100;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  
+  /* Стили для меню всех опций и категорий */
+  .all-menu{
+    position: fixed;
+    display: flex;
+    top:0px;
+    left:0px;
+    width:0px;
+    height: 100%;
+    transform: translateX(100%);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    background: var(--white);
+    z-index:200;
+    visibility: hidden;
+    opacity:0;
+    transition: all 0.3s;
+  }
+  
+  .all-menu .title{
+    color: #000;
+    font-family: 'TTTravels';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .all-menu .catalog{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--secondary, #DEFFDD);
+  }
+  .all-menu .catalog .text{
+    color: var(--primary-color);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .all-menu .button-close{
+    display: flex;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  .all-menu .menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--black);
+  }
+  .all-menu .menu-tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .all-menu .menu-tab .text{
+    color: var(--black);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .all-menu .options{
+    display: flex;
+    padding-left: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+  }
+  
+  .all-menu .categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .all-menu .categories .text a{
+    gap:10px;
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  
+  /* ----Стили для каталога книг---- */
+  .catalog-menu{
+    position: fixed;
+    display: flex;
+    height:100%;
+    width:600px;
+    padding: 30px;
+    left:0;
+    top:0;
+    transform:translateX(-100%);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    background-color: var(--white);
+    z-index:300;
+    visibility: hidden;
+    opacity:0;
+    box-shadow: var(--black);
+  
+    transition: all 0.3s;
+    
+  }
+  .catalog-menu .button-close{
+    display: flex;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  
+  .catalog-menu .title{
+    color: #000;
+    font-family: 'TTTravels';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .catalog-menu .categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .catalog-menu .categories .text a{
+    color: var(--black);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .header a:hover{
+    color: var(--primary-color);
+  }
+  .button-close{
+    position: relative;
+  }
+  
+  
+  /* Стили для хэдера*/
+  .header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .up-header{
+    display: flex;
+    padding: 20px 100px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background: var(--primary-color);
+  }
+  .left-up-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .right-up-header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    }
+  
+  .header
+  .text a{
+    color: var(--white-non-accent);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .header a:hover{
+    color: var(--white);
+  }
+  .geoposition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height:24px;
+  
+    color: var(--white-non-accent);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .geoposition:hover{
+    color: var(--white);
+  }
+  .geopos img{
+    fill: var(--white-non-accent);
+  }
+  
+  
+  .mid-header{
+    display: flex;
+    padding: 20px 100px;
+    align-items: flex-end;
+    gap: 90px;
+    align-self: stretch;
+  }
+  .mid-header .catalog{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--secondary, #DEFFDD);
+  }
+  
+  .catalog:hover{
+    background: var(--sec-hover);
+  }
+  .mid-header .catalog .text{
+    color: var(--primary-color);
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .mid-header .search-bar{
+    display: flex;
+    min-width: 60px;
+    max-width: 2000px;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 10px;
+    background: var(--primary-color);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:var(--white);
+  }
+  .search-bar button:focus, button:hover{
+    color: var(--white);
+  }
+  .mid-header input::placeholder{
+    color: var(--white-non-accent);
+    
+  }
+  .mid-header .search-mobile{
+    position: absolute;
+    visibility: hidden;
+  }
+  .menu{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--primary-color);
+  }
+  .menu-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu-tab .text{
+    color: var(--primary-color, #2CA54E);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .mid-header .all-menus{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--secondary, #DEFFDD);
+    position: absolute;
+    justify-content: center;
+    gap: 10px;
+    color: var(--black);
+    visibility: hidden;
+  }
+  
+
+  .all-menus-mobile{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .down-header{
+    display: flex;
+    padding: 0px 100px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .left-down-header{
+    display: flex;
+    padding: 20px 0px;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+  }
+  .left-down-header .text a{
+    color: var(--black, #303030);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .left-down-header .discount{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--secondary-blue);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .discount a{
+    color: var(--white);
+  }
+  .right-down-header{
+    display: flex;
+    padding-left: 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+  }
+  /* Конец стилей хэдера*/
+
+
+
+
+
+
+
+
+  /*============= Футер страницы ===============*/
+.footer{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    background: var(--primary-color, #2CA54E);
+    justify-content: center;
+    align-items: flex-start;
+    padding:60px 100px;
+    gap:118px;
+    overflow: hidden;
+}
+.footer .leef-left-up{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.footer .leef-right-up{
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+.footer .leef-left-down{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+}
+.footer .leef-right-down{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.footer .left-options{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.footer .left-options-1{
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 40px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.down-options{
+    flex: 1 0 0;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    color: var(--white, rgba(255, 255, 255, 0.70));
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer .option{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+.footer .title{
+    color: var(--white);
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer .text, .footer a{
+    color: var(--white-non-accent);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer .text a:hover{
+    color: var(--white);
+}
+.footer .option .text a:visited{
+    color: var(--white-non-accent);
+}
+.footer .inf-and-artists, .footer .acc-and-pupils{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+}
+.footer .msg-art{
+    width: 143px;
+    height: 100px;
+    flex-shrink: 0;
+}
+.footer .right-options{
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 52px;
+    max-width: 412px;
+}
+.right-options .top{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.right-options .title{
+    color: var(--white, #FFF);
+    font-family: 'TTTravels';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.right-options .tel a{
+    color: var(--white, #FFF);
+    font-family: 'Inter';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.right-options .top .email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.right-options .top .email a:hover div{
+    color: var(--white);
+}
+
+.down-options .text{
+    position: relative;
+}
+
+.down-options-hidden{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    color: var(--white-non-accent, rgba(255, 255, 255, 0.70));
+    font-family: 'Inter';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*======== Дивайдер =======*/
+.divider{
+  height: 0px;
+  width: 100%;
+  border-bottom: 3px solid var(--primary-color);
+  border-radius: 20px;
+}

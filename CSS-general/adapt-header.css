@@ -1,0 +1,165 @@
+@media screen and (max-width:1730px) {
+  .mid-header  .all-menus{
+    position: relative;
+    visibility: visible;
+  }
+  .mid-header .menu{
+    position: absolute;
+    visibility: hidden;
+    width: 0px;
+  }
+}
+
+@media screen and (max-width:1540px) {
+  .left-up-header{
+    position: absolute;
+    visibility: hidden;
+  }
+  .left-down-header .del{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+}
+
+@media screen and (max-width:1380px) {
+  .mid-header .catalog{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+}
+
+@media screen and (max-width:1180px) {
+  .logo{
+    width: 162px;
+    height: 72px;
+    
+  }
+  .mid-header .search-bar{
+    min-width: 300px;
+  }
+  .up-header, .mid-header, .down-header{
+    padding:20px 60px;
+  }
+  .mid-header{
+    justify-content: space-between;
+  }
+  
+  .mid-header .search-bar{
+    position: absolute;
+    visibility: hidden;
+  }
+  .mid-header .all-menus{
+    position: relative;
+    visibility: visible;
+    width: 60px;
+    height: 60px;
+    
+  }
+}
+
+@media screen and (max-width:760px) {
+  .catalog-menu{
+    width:100%;
+  }
+  .catalog-menu .title{
+    font-size: 28px;
+  }
+  .catalog-menu .categories .text a{
+    font-size: 14px;
+  }
+  .all-menu .title{
+    font-size: 28px;
+  }
+  .all-menu .categories .text a{
+    font-size: 14px;
+  }
+  .all-menu .button-close, .catalog-menu .button-close{
+    height: 20px;
+    width: 20px;
+    
+  }
+  .catalog-menu .categories {
+    gap:20px;
+  }
+  .all-menu .options {
+    gap:20px;
+  }
+  .all-menu .options img{
+    width: 40px;
+    height: 40px;
+  }
+  .all-menu .catalog, .all-menu .catalog .text{
+    align-items: center;
+    font-size: 20px;
+  }
+  .all-menu .catalog img{
+    width: 30px;
+    height: 30px;
+  }
+  .header .up-header,.header .mid-header,.header .down-header{
+    padding:20px 40px;
+  }
+  .down-header{
+    position: absolute;
+    visibility: hidden;
+  }
+  .mid-header .all-menus{
+    position: absolute;
+    visibility: hidden; 
+  }
+  
+  .mid-header .all-menus-mobile{
+    position: absolute;
+    visibility: visible;
+    right: 40px;
+  }
+
+  .mid-header .search-mobile{
+    position: absolute;
+    visibility: visible;
+    right: 100px;
+  }
+
+  .header .text a{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .up-header .left-up-header{
+    width: 0px;
+  }
+  .mid-header .menu{
+    width: 0px;
+    position: absolute;
+    visibility: hidden;
+  }
+  .mid-header .search-bar{
+    width: 0px;
+  }
+  .logo{
+    width: 91.125px;
+    height: 40.5px;
+  }
+  .header .up-header,.header .mid-header,.header .down-header{
+    padding:20px 20px;
+  }
+  .mid-header .all-menus-moble{
+    position: relative;
+    visibility: visible;
+  }
+  
+  .header .text a{
+    font-size: 12px;
+  }
+
+  .mid-header .all-menus-mobile{
+    right: 20px;
+  }
+  .mid-header .search-mobile{
+    right: 80px;
+  }
+}
+

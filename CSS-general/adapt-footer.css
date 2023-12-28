@@ -1,0 +1,132 @@
+@media screen and (max-width:1600px) {
+    .footer{
+        gap:80px;
+    }
+    .footer .left-options-1 .acc-and-pupils{
+        visibility: hidden;
+        position: absolute;
+    }
+    .footer .left-options-1{
+        justify-content: flex-start;
+        gap:80px
+    }
+}
+
+@media screen and (max-width:1380px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .left-options-1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer .left-options-1 .acc-and-pupils{
+        visibility: visible;
+        position: relative;
+    }
+    .footer .right-options{
+        flex-direction: row;
+        max-width:1720px;
+    }
+    .footer .down-options{
+        visibility: hidden;
+        position: absolute;
+    }
+    .footer .down-options-hidden{
+        visibility:visible;
+        position: relative;
+        gap:20px;
+    }
+    .down-options-hidden img{
+        width:144px;
+        height: 64px;
+    }
+}
+
+@media screen and (max-width:1180px) {
+    .footer{
+        flex-direction: row;
+        padding:40px 60px;
+    }
+    .footer .right-options{
+        flex-direction: column
+    }
+    .footer .down-options{
+        visibility: visible;
+        position: relative;
+    }
+    .footer .down-options-hidden{
+        visibility: hidden;
+        position: absolute;
+    }
+    
+  }
+  
+  @media screen and (max-width:1000px) {
+    .footer{
+        flex-direction: column-reverse;
+        padding:40px 60px;
+    }
+    .footer .left-options-1s{
+        flex-wrap: wrap;
+        gap:80px;
+    }
+    .footer .inf-and-artists{
+        gap:80px;
+    }
+    
+  }
+
+  @media screen and (max-width:760px) {
+    .footer{
+        flex-direction: column-reverse;
+        padding:40px 40px;
+    }
+    .right-options .title {
+        font-size: 24px;
+    }
+    .footer .left-options-1 .title{
+        font-size: 18px;
+    }
+    .footer .left-options-1 .text a{
+        font-size: 14px;
+    }
+
+  }
+  
+  @media screen and (max-width:480px) {
+    .footer{
+        flex-direction: column-reverse;
+        padding:20px 20px;
+        gap:40px;
+    }
+    .footer .right-options {
+        gap:20px;
+    }
+    .right-options .tel a{
+        font-size: 24px;
+    }
+    .right-options .title {
+        font-size: 20px;
+    }
+    .footer .left-options-1{
+        gap:40px;
+    }
+    .footer .left-options-1 .acc-and-pupils,.footer .left-options-1 .inf-and-artists{
+        gap:40px;
+    }
+    .footer .left-options-1 .title{
+        font-size: 16px;
+    }
+    .footer .left-options-1 .text a{
+        font-size: 13px;
+    }
+    .footer .option{
+        gap:10px
+    }
+    .leef-right-down, .leef-left-up{
+        visibility: hidden;
+    }
+  }

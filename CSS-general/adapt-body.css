@@ -1,0 +1,26 @@
+@media screen and (max-width:1200px){
+    body{
+        gap:80px;
+    }
+}
+
+@media screen and (max-width:760px){
+    body{
+        gap:60px;
+    }
+    
+.divider{
+    border-bottom: 1.5px solid var(--primary-color);
+}
+}
+
+@media screen and (max-width:480px){
+    body{
+        gap:40px;
+    }
+}
+
+
+
+
+

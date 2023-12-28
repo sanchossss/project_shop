@@ -1,0 +1,110 @@
+@media screen and (max-width: 1380px){
+    .footer .down-options {
+        visibility: visible;
+        position: relative;
+    }
+}
+@media screen and (max-width:1180px) {
+    .header-mini{
+        padding:20px 60px;
+    }
+    .ordering{
+        padding: 0px 60px;
+    }
+    .footer{
+        padding:20px 60px;
+    }
+}
+
+
+
+@media screen and (max-width:760px) {
+    .header-mini{
+        padding:20px 40px;
+    }
+    .go-back{
+        font-size: 20px;
+        padding:14px;
+    }
+    .go-back img{
+        width: 20px;
+        height: 20px;
+    }
+    .main{
+        gap:40px;
+    }
+    .form-data .title{
+        font-size: 28px;
+    }
+    .user-data .name,
+    .user-data .psswrd,
+    .user-data .mail{
+        min-width: 100px;
+    }
+    .payment-block .title{
+        font-size: 22px;
+    }
+    .span label{
+        font-size: 16px;
+    }
+    
+    .footer{
+        padding:20px 40px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .header-mini{
+        padding:20px 20px 0px 20px;
+    }
+    .logo{
+        scale:calc(1.2);
+    }
+    .form-data .title{
+        font-size: 24px;
+    }
+    .go-back{
+        font-size: 16px;
+        padding:12px;
+    }
+    .go-back img{
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-data{
+        max-width: 440px;
+    }
+    
+    .form-data div{
+        font-size: 14px;
+    }
+    button[type=submit]{
+        width:100%;
+        font-size: 14px;
+    }
+    .footer{
+        padding:20px 20px;
+    }
+    .down-options{
+        gap:10px;
+    }
+    .down-options .text{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .form-data .title{
+        font-size: 20px;
+    }
+    .user-data{
+        gap:16px;
+    }
+    .user-data div{
+        height: 45px;
+    }
+    .type-of-del div label{
+        gap:5px;
+    }
+}

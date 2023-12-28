@@ -1,0 +1,17 @@
+:root {
+    --shadow-standard: 0px 0px 30px 0px rgba(48, 48, 48, 0.3);
+    --shadow-green: 0px 0px 20px 0px rgba(44, 165, 78, 1);
+    --primary-color: rgba(44, 165, 78, 1);
+    --secondary: rgba(222, 255, 221, 1);
+    --sec-hover: rgb(183, 255, 179);
+    --white: rgba(255, 255, 255, 1);
+    --white-non-accent: rgba(255, 255, 255, 0.7);
+    --black: rgba(48, 48, 48, 1);
+    --secondary-orange: rgba(230, 165, 68, 1);
+    --secondary-blue: rgba(57, 126, 208, 1);
+    --black-non-accent: rgba(114, 114, 114, 1);
+    --red: rgba(249, 6, 6, 1);
+    --red-second: rgba(206, 0, 0, 1);
+    --blue-second: rgba(53, 114, 237, 1);
+    --black-3rd: rgba(188, 188, 188, 1);
+}  

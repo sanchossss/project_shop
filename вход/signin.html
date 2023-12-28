@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../CSS-general/reset.css">
+    <link rel="stylesheet" href="../CSS-general/root.css">
+    <link rel="stylesheet" href="../CSS-general/general-styles.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-header.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-footer.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-body.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="icon" href="img/svg/лого версия 2.svg">
+    <title>Страница книги</title>
+</head>
+<body class="main">       
+    <div class="header-mini">
+        <a class="go-back" href="../index.html">
+            <img class="icon left-pointer" src="img/svg/icons/left-pointer.svg">
+            Назад
+        </a>
+        <img class="logo" src="img/svg/logo.svg">
+    </div>
+
+
+    <form method="post" class="form-data">
+        <div class="title">Вход в аккаунт ЛавБукс</div>
+        <fieldset class="user-data">
+            <div class="mail">
+                <input type="email" name="Почта" placeholder="Электронная почта" required>
+                <img class="icon icon-mail" src="img/svg/icons/mail.svg">
+            </div>
+
+            <div class="psswrd">
+                <input type="password" name="Пароль" placeholder="Пароль" pattern="[A-Za-z0-9]{6,}" required>
+                <img class="icon icon-lock" src="img/svg/icons/lock.svg">
+            </div>
+            
+            <button type="submit" method="post">Войти</button>
+        </fieldset>
+        <div class="registr"><a href="../регистрация/reg.html">Нет аккаунта? Создай!</a></div>
+    </form>
+</body>
+</html>
