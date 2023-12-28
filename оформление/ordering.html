@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../CSS-general/reset.css">
+    <link rel="stylesheet" href="../CSS-general/root.css">
+    <link rel="stylesheet" href="../CSS-general/general-styles.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-header.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-footer.css">
+    <link rel="stylesheet" href="../CSS-general/adapt-body.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="icon" href="img/svg/лого версия 2.svg">
+    <title>Страница книги</title>
+</head>
+<body>       
+    <div class="header-mini">
+        <a class="go-back" href="../корзина/basket.html">
+            <img class="icon left-pointer" src="img/svg/icons/left-pointer.svg">
+            Назад
+        </a>
+        <img class="logo" src="img/svg/logo.svg">
+    </div>
+
+
+
+    <div class="ordering">
+        <div class="title">Оформление заказа</div>
+
+        <div class="main">
+            <form method="post" class="form-data">
+                <fieldset class="user-data">
+                    <div class="name">
+                        <input type="text" name="Имя" placeholder="Имя" required>
+                        <img class="icon icon-user" src="img/svg/icons/user.svg">
+                    </div>
+    
+                    <div class="tel">
+                        <input type="tel" name="Телефон" placeholder="Номер телефона" required>
+                        <img class="icon icon-tel" src="img/svg/icons/phone.svg">
+                    </div>
+                    
+                    <div class="mail">
+                        <input type="email" name="Почта" placeholder="Электронная почта" required>
+                        <img class="icon icon-mail" src="img/svg/icons/mail.svg">
+                    </div>
+                    
+                </fieldset>
+    
+                <div class="delivery-payment">
+                    <fieldset class="delivery-data">
+                        <div class="type-of-del">
+    
+                            <div class="delivery">
+                                <input class="radio-bttn" id="radio-bttn-1" type='radio' name='get' value="del" checked required>
+                                <label for="radio-bttn-1">
+                                    Доставка
+                                    <img class="icon box" src="img/svg/icons/box.svg">
+                                </label>
+                            </div>
+    
+                            <div class="pickup">
+                                <input class="radio-bttn" id="radio-bttn-2" type='radio' name='get' value="pickup" required>
+                                <label for="radio-bttn-2">
+                                    Самовывоз
+                                    <img class="icon car" src="img/svg/icons/car.svg">
+                                </label>
+                            </div>
+
+    
+                        </div>
+                        <input type="text" class="address-pickup" placeholder="Укажите адрес доставки" required></input>
+                        <textarea class="comment" placeholder="Ваш комментарий к заказу"></textarea>
+                    </fieldset>
+                    
+                    <fieldset class="payment-block">
+                        <div class="title">Способ оплаты</div>
+                        <div class="span bank-card-span">
+                            <input type="radio" class="radio bank-card" id="bank-card" name='payment' value="card" checked>
+                            <label class="label" for="bank-card">Банковской картой</label>
+                        </div>
+                    
+                        <div class="span qr-code-span">
+                            <input type="radio" class="radio qr-code" id="qr-code" name='payment' value="qr"/>
+                            <label class="label" for="qr-code">QR-кодом с помощью СБП</label>
+                        </div>
+                    
+                        <div class="span after-span">
+                            <input type="radio" class="radio after" id="after" name='payment' value="after">
+                            <label class="label" for="after">При получении</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <button type="submit" method="post">Перейти к оплате</button>
+            </form>
+
+
+            <div class="right-side">
+                <div class="basket">
+                    <div class="infos">
+                    <div class="title">Корзина</div>
+                    <div class="info">
+                        <div class="titles">
+                            <div class="text">Количество</div>
+                            <div class="text">Общая стоимость</div>
+                            <div class="text">Скидка</div>
+                        </div>
+                        <div class="values">
+                            <div class="text">1</div>
+                            <div class="text">1359 руб</div>
+                            <div class="text">0 руб</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="overall">
+                        <div class="text">Итого</div>
+                        <div class="text">4 077 руб</div>
+                    </div>
+                </div>
+    
+                <div class="book-card">
+                    <div class="left-part">
+                        <img class="book-photo" src="img/book-photo.png">
+                        <div class="info">
+                            <div class="name">Крутой маршрут. Хроника времен культа личности</div>
+                            <div class="author">Евгения Гинзбург</div>
+                            <div class="publ">Издательство Иллюминатор, 2023</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="left-part">
+                        <img class="book-photo" src="img/book-photo.png">
+                        <div class="info">
+                            <div class="name">Крутой маршрут. Хроника времен культа личности</div>
+                            <div class="author">Евгения Гинзбург</div>
+                            <div class="publ">Издательство Иллюминатор, 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <img class="leef-right-up" src="img/svg/leef_down_right.svg">
+        <img class="leef-left-down" src="img/svg/leef_down.svg">
+        <div class="down-options">
+            <img class="logo" src="img/svg/logo-2.svg">
+            <div class="text">© 2023–2027, ООО «Лавбукс.ру».</div>
+        </div>
+    </div>
+</body>
+</html>

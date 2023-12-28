@@ -1,0 +1,169 @@
+
+/*--------------------*/
+/* ------Адаптив------*/
+/*--------------------*/
+@media screen and (max-width: 1380px){
+    .footer .down-options {
+        visibility: visible;
+        position: relative;
+    }
+}
+@media screen and (max-width:1180px) {
+    .header-mini{
+        padding:20px 60px;
+    }
+    .ordering{
+        padding: 0px 60px;
+    }
+    .footer{
+        padding:20px 60px;
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .ordering .title{
+        font-size: 40px;
+    }
+    .payment-block .title{
+        font-size: 24px;
+    }
+    .infos .title{
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width:760px) {
+    .header-mini{
+        padding:20px 40px;
+    }
+    .go-back{
+        font-size: 20px;
+        padding:14px;
+    }
+    .go-back img{
+        width: 20px;
+        height: 20px;
+    }
+    .ordering{
+        gap:20px;
+    }
+
+    .ordering{
+        padding:20px 40px;
+    }
+    .ordering .title{
+        font-size: 32px;
+    }
+    .main{
+        gap:40px;
+    }
+    .user-data .name,
+    .user-data .tel,
+    .user-data .mail{
+        min-width: 100px;
+    }
+    .payment-block .title{
+        font-size: 22px;
+    }
+    .span label{
+        font-size: 16px;
+    }
+
+    
+    .footer{
+        padding:20px 40px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .header-mini{
+        padding:20px 20px 0px 20px;
+    }
+    .logo{
+        scale:calc(1.2);
+    }
+    .go-back{
+        font-size: 16px;
+        padding:12px;
+    }
+    .go-back img{
+        width: 16px;
+        height: 16px;
+    }
+
+    .ordering{
+        padding:0px 20px;
+    }
+    .ordering .title{
+        font-size: 26px;
+    }
+    .payment-block .title{
+        font-size: 18px;
+    }
+    .form-data{
+        max-width: 440px;
+    }
+    
+    .form-data div{
+        font-size: 14px;
+    }
+    
+    .type-of-del .delivery,
+    .type-of-del .pickup{
+        font-size: 14px;
+    }
+    .delivery-data input::placeholder,
+    .delivery-data textarea::placeholder{
+        font-size: 14px;
+    }
+    .payment-block .span label{
+        font-size: 14px;
+    }
+
+    .basket{
+        min-width: 300px;
+        gap:0px;
+    }
+    .infos .title{
+        font-size: 20px;
+    }
+    .basket .infos .text{
+        font-size:14px;
+    }
+    .overall{
+        padding:0px;
+    }
+    .book-card img{
+        width:60px;
+        height: 90px;
+    }
+    textarea{
+        min-width: 100px;
+    }
+    button[type=submit]{
+        width:100%;
+    }
+    .footer{
+        padding:20px 20px;
+    }
+    .down-options{
+        gap:10px;
+    }
+    .down-options .text{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .user-data{
+        gap:16px;
+    }
+    .user-data div{
+        height: 45px;
+    }
+    .type-of-del div label{
+        gap:5px;
+    }
+}
