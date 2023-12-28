@@ -1,0 +1,22 @@
+
+/*--------------------*/
+/* ------Адаптив------*/
+/*--------------------*/
+
+@media screen and (max-width:760px){
+  .digits{
+    font-size: 150px;
+  }
+  .error-block .text{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:480px){
+  .digits{
+    font-size: 112.5px;
+  }
+  .error-block .text{
+    font-size: 22.5px;
+  }
+}
